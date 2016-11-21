@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err, db)=>{
     // }, (err)=>{
     //     console.log('Unable to fetch todos', err);
     // });
-
+    //--------------------------------------------------------------
     // find record based on search criteria
     //db.collection('Todos').find({completed: false}).toArray().then((docs)=>{
     // db.collection('Todos').find({
@@ -24,14 +24,14 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err, db)=>{
     // }, (err)=>{
     //     console.log('Unable to fetch todos', err);
     // });
-
+    //--------------------------------------------------------------
     // count the number of records
     // db.collection('Todos').find().count().then((count)=>{
     //     console.log(`Todos count: ${count}`);
     // }, (err)=>{
     //     console.log('Unable to fetch todos', err);
     // });
-
+    //--------------------------------------------------------------
     db.collection('Users').find({name: 'Oscar'}).toArray().then((docs)=>{
 
         console.log('Search Result');
@@ -39,5 +39,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err, db)=>{
     },(err)=>{
         console.log(`Sorry! no result found: ${err}`);
     })
+
+
     // db.close();
 });
